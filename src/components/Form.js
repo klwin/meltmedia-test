@@ -7,6 +7,7 @@ const Form = () => {
 	const [superpower, setSuperpower] = useState('');
 	const [mission, setMission] = useState('');
 	const [errors, setErrors] = useState([]);
+	const [success, setSuccess] = useState(false);
 
 	const change = (e) => {
 		e.preventDefault();
@@ -31,14 +32,17 @@ const Form = () => {
 	const submit = (e) => {
 		e.preventDefault();
 		setErrors(() => []);
-		if (name || email || superpower || mission === '') {
+		setSuccess(() => true);
+		if (name === '' || email === '' || superpower === '' || mission === '') {
 			setErrors((oldErrors) => [
 				...oldErrors,
 				'Please fill out all the fields.',
 			]);
+			setSuccess(() => false);
 		}
 		if (!validateEmail(email)) {
 			setErrors((oldErrors) => [...oldErrors, 'Please enter a valid email.']);
+			setSuccess(() => false);
 		}
 	};
 
@@ -61,6 +65,9 @@ const Form = () => {
 						</ul>
 					</div>
 				</div>
+			)}
+			{success && (
+				<h2 className="validation-sucess-label">Submitted successfully!</h2>
 			)}
 			<form onSubmit={submit}>
 				<div className="one-container">
