@@ -13,27 +13,27 @@ const Nav = ({ logoSrc, logoAlt }) => {
 				<nav className={clicked ? 'show' : ''}>
 					<ul>
 						<li>
-							<NavLink exact activeClassName="active" to="/">
+							<NavLink exact activeClassName="active" to="./">
 								Home
 							</NavLink>
 						</li>
 						<li>
-							<NavLink activeClassName="active" to="/work">
+							<NavLink activeClassName="active" to="./work">
 								Work
 							</NavLink>
 						</li>
 						<li>
-							<NavLink activeClassName="active" to="/culture">
+							<NavLink activeClassName="active" to="./culture">
 								Culture
 							</NavLink>
 						</li>
 						<li>
-							<NavLink activeClassName="active" to="/labs">
+							<NavLink activeClassName="active" to="./labs">
 								Labs
 							</NavLink>
 						</li>
 						<li>
-							<NavLink activeClassName="active" to="/thoughts">
+							<NavLink activeClassName="active" to="./thoughts">
 								Thoughts
 							</NavLink>
 						</li>

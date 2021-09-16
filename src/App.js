@@ -20,7 +20,7 @@ function App() {
 							your users <br /> across all devices for the digital economy.
 						</p>
 					}
-					media={{ type: 'image', url: './media/icons.png', alt: 'icons' }}
+					media={{ type: 'image', url: './media/Icons.png', alt: 'icons' }}
 				/>
 				<Content
 					title="Call for "
