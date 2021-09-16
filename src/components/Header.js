@@ -27,7 +27,7 @@ const Header = () => {
 						}
 						cta="See Our Work"
 						theme="white"
-						link="/see-our-work"
+						link="./see-our-work"
 					/>
 				</div>
 				<div className="item">

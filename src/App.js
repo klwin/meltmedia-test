@@ -28,7 +28,7 @@ function App() {
 					theme="white"
 					textalign="center"
 					cta="See Our Openings"
-					link="/see-our-openings"
+					link="./see-our-openings"
 					background='linear-gradient(0deg, rgba(103, 103, 103, 0.9), rgba(103, 103, 103, 0.9)), url("./media/superheroes.png")'
 				/>
 				<Content
