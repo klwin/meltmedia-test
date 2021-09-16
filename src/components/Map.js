@@ -39,7 +39,7 @@ const Map = ({ title, titlebold, background }) => {
 						<p className="bold">Let's be friends:</p>
 						<img
 							style={{ margin: '10px 0px' }}
-							src="../media/social-icons.png"
+							src="./media/social-icons.png"
 							alt="social icons"
 						/>
 					</div>

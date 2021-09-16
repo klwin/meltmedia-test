@@ -20,7 +20,7 @@ function App() {
 							your users <br /> across all devices for the digital economy.
 						</p>
 					}
-					media={{ type: 'image', url: '../media/icons.png', alt: 'icons' }}
+					media={{ type: 'image', url: './media/icons.png', alt: 'icons' }}
 				/>
 				<Content
 					title="Call for "
@@ -29,7 +29,7 @@ function App() {
 					textalign="center"
 					cta="See Our Openings"
 					link="/see-our-openings"
-					background='linear-gradient(0deg, rgba(103, 103, 103, 0.9), rgba(103, 103, 103, 0.9)), url("../media/superheroes.png")'
+					background='linear-gradient(0deg, rgba(103, 103, 103, 0.9), rgba(103, 103, 103, 0.9)), url("./media/superheroes.png")'
 				/>
 				<Content
 					textalign="center"
