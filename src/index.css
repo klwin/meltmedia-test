@@ -1,13 +1,445 @@
+/* CSS RESET */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	line-height: 1;
+}
+ol,
+ul {
+	list-style: none;
+}
+blockquote,
+q {
+	quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* CSS */
+/* Layouts */
+
+.one-container,
+.two-container,
+.three-container,
+.four-container {
+	width: 880px;
+	margin: auto;
+}
+
+.two-container,
+.three-container,
+.four-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+}
+
+.two-container .item {
+	flex: 50%;
+	padding: 10px;
+}
+
+.three-container .item {
+	flex: 33.33%;
+	padding: 10px;
+}
+/* Theme CSS */
+.white {
+	color: white;
+}
+
+.black {
+	color: #89b8ea;
+}
+
+.white h4,
+.black h4 {
+	font-size: 36px;
+}
+
+.white h4 span,
+.black h4 span,
+.addressInfo span,
+.addressInfo .bold {
+	font-weight: bold;
+}
+
+.black p {
+	color: black;
+}
+
+/* Section CSS */
+.navBar,
+.navBar a {
+	color: white;
+}
+.navBar,
+.navBar nav ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.navBar .logo,
+.navBar nav ul {
+	padding: 10px 30px;
+	align-items: center;
+}
+
+.navBar nav ul li {
+	padding: 10px;
+	text-transform: uppercase;
+}
+.navBar nav ul li:hover {
+	border-bottom: 2px solid purple;
+}
+
+.navBar nav ul li a,
+.button-link {
+	text-decoration: none;
+}
+
+.active {
+	border-bottom: 2px solid purple;
+}
+
+.navBar .icon {
+	display: none;
+}
+
+.image-stack {
+	display: grid;
+}
+
+.image-stack-top {
+	padding-top: 215px;
+	padding-left: 300px;
+	grid-area: 1/1/1/1;
+	z-index: 1;
+}
+
+.image-stack-bottom {
+	grid-area: 1/1/1/1;
+}
+
+.content-container {
+	padding: 2em 0px;
+}
+.content-container p {
+	line-height: 1.8;
+}
+
+.content-container h4 {
+	line-height: 1.2;
+	padding: 25px 0px;
+}
+
+.content-container img {
+	margin: 20px 0;
+}
+.content-container .video-wrapper {
+	margin: auto;
+}
+
+button {
+	cursor: pointer;
+}
+
+.addressInfo {
+	background-color: rgba(0, 0, 0, 0.8);
+	color: white;
+	padding: 20px 30px;
+	grid-column: 2 / 4;
+	grid-row: 1 / 3;
+	width: fit-content;
+	position: absolute;
+	right: 0;
+	text-align: right;
+}
+
+.addressInfo .icon {
+	font-size: 30px;
+	cursor: pointer;
+}
+.addressInfo .close {
+	display: none;
+}
+.addressInfo .show {
+	display: block;
+	text-align: left;
+}
+
+.addressInfo h4 {
+	font-size: 26px;
+}
+
+.addressInfo .section {
+	margin: 10px 0;
+}
+
+.map {
+	grid-column: 1 / 14;
+}
+
+.mapcontainer {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: repeat(12, 1fr);
+	height: 450px;
+}
+
+input[type='text'],
+input[type='email'],
+textarea {
+	margin: 5px;
+	padding: 10px;
+}
+
+textarea {
+	height: 300px;
+}
+
+form .one-container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+form .one-container .name {
+	grid-column: 1 / 1;
+}
+
+form .one-container .email {
+	grid-column: 2 / 2;
+}
+
+form .one-container .superpower,
+form .one-container .mission {
+	grid-column: span 2;
+}
+
+footer {
+	background-color: #89b8ea;
+	padding: 20px 0px;
+	text-align: center;
+	color: white;
+}
+
+footer p span {
+	font-weight: bold;
+}
+
+.error-container .validation-errors,
+.error-container .validation-errors-label {
+	color: red;
+}
+
+@media (max-width: 890px) {
+	.two-container,
+	.three-container,
+	.four-container {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.one-container,
+	.two-container,
+	.three-container,
+	.four-container {
+		width: 100%;
+	}
+
+	.content-container img,
+	.content-container .video-wrapper {
+		width: 100% !important;
+	}
+
+	.content-container {
+		padding: 2em;
+	}
+}
+
+@media (max-width: 673px) {
+	.navBar .icon {
+		display: block;
+		font-size: 30px;
+		padding: 10px 30px;
+		text-align: center;
+		cursor: pointer;
+	}
+
+	.navBar nav {
+		display: none;
+	}
+
+	.navBar .show {
+		display: block;
+		position: absolute;
+		z-index: 2;
+		top: 4.5em;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		max-width: 100%;
+		margin: 0 auto;
+		padding: 0;
+		height: auto;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		overflow-y: auto;
+	}
+
+	.navBar,
+	.navBar nav ul {
+		background-color: #89b8ea;
+	}
+
+	.navBar .menu,
+	.navBar nav ul {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		font-size: 1em;
+	}
+	.navBar nav ul li {
+		width: 100%;
+		padding: 30px 0px;
+		border-bottom: 1px solid white;
+	}
+	.navBar nav ul li:last-child {
+		border-bottom: none;
+	}
+	.image-stack-top {
+		padding-left: 220px;
+	}
+}
+
+@media (max-width: 426px) {
+	.image-stack-top img,
+	.image-stack-bottom img {
+		width: 100%;
+	}
+	form .one-container {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+	}
+	input[type='text'],
+	input[type='email'],
+	textarea {
+		width: 100%;
+		margin: 10px 0px;
+	}
 }
